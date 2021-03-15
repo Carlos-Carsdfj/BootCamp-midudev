@@ -9,3 +9,16 @@ export const  getAll = (() => {
      return data;
     })
 });
+
+
+export const postNote =(newNote)=>{
+
+  return axios.post("https://jsonplaceholder.typicode.com/posts",newNote)
+  .then((response)=>{
+    const {data} = response;
+    return data;
+    
+  }); 
+
+
+}
